@@ -37,10 +37,11 @@ public void selectionSort(int[] a) {
   }
 }
  
-// merge sort implementation
+// merge sort implementation (nlogn compares)
 public class Merge {
-  // recurse (dividing in half, call sort) until we get to 1 element arr
-  // go back up, begin by merging 2 single-elt arr
+  // recurse (dividing in half, call sort) until we get to 1 element arr  -- depth: logn
+  // go back up, begin by merging 2 single-elt arr                        -- work at each lv: n
+  // memory: depends--uses extra space proportional to n; aux arr needs to be of len n for last merge
   
   // merge a[lo .. mid] with a[mid+1 .. hi] using aux[lo .. hi]
   private static void merge(int[] a, int[] aux, int lo, int mid, int hi) {
