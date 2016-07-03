@@ -75,3 +75,45 @@ public class Merge {
     sort(a, aux, 0, a.length - 1);
   }
 }
+
+// Quicksort Implementation | Runtime: O(nlogn) avg, O(n^2) worst case | Memory: O(logn)
+public class Quick 
+{
+
+    // partition the subarray a[lo..hi] so that a[lo..j-1] <= a[j] <= a[j+1..hi]
+    // and return the index j.
+    private static int partition(Comparable[] a, int lo, int hi) 
+    {
+    int i = lo, j = hi+1;
+    while (true) 
+    {
+        while (less(a[++i], a[lo]))     // find item on left to swap
+            if (i == hi) break;       
+      
+        while (less(a[lo], a[--j]))     // find item on right to swap
+            if (j == lo) break;
+        
+        if (i >= j) break;              // check if pointers cross
+        exch(a, i, j);                  // swap
+    }
+    
+    exch(a, lo, j);                     // put partitioning item v at a[j]
+    return j;                           // return index of item now known to be in place
+  }
+  
+    public static void sort(Comparable[] a) 
+    {
+      StdRandom.shuffle(a);
+      sort(a, 0, a.length - 1);
+    }
+  
+    // quicksort the subarray from a[lo] to a[hi]
+    private static void sort(Comparable[] a, int lo, int hi)
+    {
+      if (hi <= lo) return;             // no partition for subarr of size 1
+      int j = partition(a, lo, hi);
+      sort(a, lo, j-1);
+      sort(a, j+1, hi);
+  }
+}
+
