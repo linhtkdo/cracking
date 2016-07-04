@@ -49,7 +49,7 @@ public class MaxPQ<Key extends Comparable<Key>>
     
     // arr helper fxn
     private boolean less (int i, int j)
-    {   return pq[i].compareTo(pq[j)) < 0;  }
+    {   return pq[i].compareTo(pq[j]) < 0;  }
     private void exch(int i, int j)
     {   Key t = pq[i]; pq[i] = pq[j]; pq[j] = t;    }
     
