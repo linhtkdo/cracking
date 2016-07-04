@@ -79,6 +79,23 @@ public class Merge {
 // Quicksort Implementation | Runtime: O(nlogn) avg, O(n^2) worst case | Memory: O(logn)
 public class Quick 
 {
+/***************************************
+partition so that entry a[j] is in place
+divide: left and right of a[j]
+repeat
+
+Worse case: a[] is sorted
+  each partition: a[0]--smallest--is in place -> move j pointer O(n) times  --> O(n)compares
+  n calls to partition                                                      --> O(n^2) compares
+  
+Best case:  each partitioning stage divides a[] exactly in half
+  logn calls to partition (like mergesort)                                  --> O(nlogn) compares
+  
+Avg case: similar to best case
+
+Memory: Depth of recursion: logarithmic extra space
+
+****************************************/
 
     // partition the subarray a[lo..hi] so that a[lo..j-1] <= a[j] <= a[j+1..hi]
     // and return the index j.
