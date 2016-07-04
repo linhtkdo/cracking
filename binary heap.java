@@ -12,13 +12,13 @@ public class MaxPQ<Key extends Comparable<Key>>
     
     public void insert(Key x)   // O(log n)
     {
-        pg[++N] = x;    // add node at end
+        pq[++N] = x;    // add node at end
         swim(N);        // swim it up
     }
     
     public Key delMax()         // O(log n)     
     {
-        Key max = pg[1];
+        Key max = pq[1];
         exch(1, N--);   // exchange root with node at end
         sink(1);        // sink it down
         pq[N+1] = null; // remove max node from heap
