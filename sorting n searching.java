@@ -134,3 +134,39 @@ Memory: Depth of recursion: logarithmic extra space
   }
 }
 
+// Binary Search 
+public int binarySearch(int key, int[] a)
+{   // a must be sorted
+    int lo = 0;
+    int hi = a.length - 1;
+    while (lo <= hi)
+    {   // Key is in a[lo..hi] or not present
+        int mid = (lo + hi) / 2;
+        if      (key < a[mid]) hi = mid - 1;
+        else if (key > a[mid]) lo = mid + 1;
+        else                   return mid;
+    }
+    return -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
