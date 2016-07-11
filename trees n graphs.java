@@ -105,3 +105,33 @@ public class Graph
     
     
 }
+
+public class DepthFirstPaths
+{
+    // preferred if we want to visit every node in the graph
+    
+    private boolean[] marked;   // marked[v] = is there an s-v path?
+    private int[] edgeTo;       // edgeTo[v] = last edge on s-v path
+    private int s;              // source vertex
+    
+    // Computes a path between s and every other vertex in graph G
+    public DepthFirstPaths(Graph G, int s)
+    {
+        this.s = s;
+        edgeTo = new int[G.V()];
+        marked = new boolean[G.V()];
+        dfs(G, s);
+    }
+    
+    // depth first search from v
+    private void dfs(Graph G, int v)
+    {
+        marked[v] = true;
+        for (int w : G.adj(v))
+            if (!marked[w])
+            {
+                dfs(G, w);
+                edgeTo[w] = v;
+            }
+    }
+}
