@@ -135,3 +135,27 @@ public class DepthFirstPaths
             }
     }
 }
+
+public class BreathFirstPaths
+{
+    private boolean[] marked;
+    ...
+    private void bfs(Graph G, int s)
+    {
+        Queue<Integer> q = new Queue<Integer>();    // init FIFO queue of vertices to explore
+        q.enqueue(s);                               // add to end of queue
+        marked[s] = true;
+        
+        while (!q.isEmpty())
+        {
+            int v = q.dequeue();                    // remove from front of queue
+            visit(v);
+            for (int w : G.adj(v))
+                if (!marked[w]) 
+                { 
+                    q.enqueue(w); 
+                    marked[w] = true; 
+                }
+        }
+    }
+}
