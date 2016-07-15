@@ -4,7 +4,7 @@ Given a string, check if it is a permutation of a palindrome.
 In:   Tact Coa
 Out:  True    (taco cat, atco cta)
 */
-boolean check(String s)
+boolean check(String s) // Time: O(n) / n = len of s
 {
     int[] table = buildFrequencyTable(s);
     return checkOdd(table);
