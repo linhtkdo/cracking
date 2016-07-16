@@ -20,8 +20,7 @@ void setZeros(int[][] a) {
     for (int i = 0; i < row.length; i++)
         if (row[i]) nullifyRow(a, i);
     
-    for (int j = 0; j < col.length; j++)
-        if (col[j]) nullifyCol(a, j);
+    // same as prev block, but using col
 }
 
 void nullifyRow(int[][] a, int row) {
@@ -29,7 +28,4 @@ void nullifyRow(int[][] a, int row) {
         a[row][j] = 0;
 }
 
-void nullifyCol(int[][] a, int col) {
-    for (int i = 0; i < a.length; i++) 
-        matrix[i][col] = 0;
-}
+// same as prev block, but using col
