@@ -3,7 +3,6 @@ If an elt in an m x n matrix is 0, its entire row and col are set to 0.
 Space: O(N)
 */
 
-
 void setZeros(int[][] a) {
     
     // keep track of all rows and cols with zeros
