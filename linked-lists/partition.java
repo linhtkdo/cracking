@@ -7,7 +7,7 @@ Out:      3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
 */
 
 Node partition(Node n, int x) {
-    // Insert elts less than x into before list and >= x into after list
+    // Insert existing nodes less than x into before list and >= x into after list
     Node beforeStart = null;
     Node beforeEnd = null;
     Node afterStart = null;
