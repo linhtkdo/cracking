@@ -16,8 +16,8 @@ Node add(l1, l2, int carry) {
     if (l2 != null) val += l2.data;
     result.data = val % 10 // record second digit of number 
     
-    // recursive stack: node vals in sum list
-    // go back up: current.next = lower level
+    // recursive stack: compute sum and pass int carry forward
+    // go back up: add to tail
     if (l1 != null || l2 != null) {
         Node more = add(l1 == null ? null : l1.next,    // one list may be shorter than another
                         l2 == null ? null : l2.next,    // don't want null pointer exception
