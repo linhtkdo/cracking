@@ -13,7 +13,6 @@ Node add(l1, l2, int carry) {
     int val = carry;
     if (l1 != null) val += l1.data;
     if (l2 != null) val += l2.data;
-    
     result.data = val % 10 // record second digit of number 
     
     if (l1 != null || l2 != null) {
