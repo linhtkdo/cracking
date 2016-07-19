@@ -6,6 +6,7 @@ In:   5,  3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1
 Out:      3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
 */
 
+// Stable ver: nodes stay in original order.
 Node partition(Node n, int x) {
     // Insert existing nodes less than x into before list and >= x into after list
     Node beforeStart = null;
