@@ -15,8 +15,8 @@ Node partition(Node n, int x) {
     
     while (n != null) {
         Node next = n.next; // save next node to iterate next
-        n.next = null;
-        if (n.data < x) {   // insert n into end of before list
+        n.next = null;      // pick this node out of the chain
+        if (n.data < x) {   // insert it into end of before list
             if (beforeStart == null) {
                 beforeStart = n;
                 beforeEnd = beforeStart;
