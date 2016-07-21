@@ -21,13 +21,13 @@ Result helper(Node head, int len) {
   if (len == 1)                 return new Result(head.next, true); // odd len
   
   
-  Result res = helper(head.next, len - 2);
-  if (!res.result || res.node == null) return res; // false compare returned --> just pass up failure
+  Result p = helper(head.next, len - 2);
+  if (!p.result || p.node == null) return p; // false compare returned --> just pass up failure
   
   // go back up: compare current to returned node and return ret.next 
-  res.result = (head.data == res.node.data);
-  res.node = res.node.next;
-  return res;
+  p.result = (head.data == p.node.data);
+  p.node = p.node.next;
+  return p;
 }
 
 int length(Node n) {
