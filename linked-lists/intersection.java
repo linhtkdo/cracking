@@ -2,6 +2,7 @@
 3 -> 1 -> 5 -> 9 \
                     7 -> 2 -> 1
           4 -> 6 /
+Time: O(A + B) | Space: O(1)
 */
 
 Node intersection(Node l1, Node l2) {
@@ -52,9 +53,9 @@ Result tailAndLen(Node l) {
 
 Node advance(Node head, int n) {
   Node curr = head;
-  while (k > 0 && curr != null) {
+  while (n > 0 && curr != null) {
     curr = curr.next;
-    k--;
+    n--;
   }
   return curr;
 }
