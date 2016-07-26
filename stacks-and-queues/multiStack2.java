@@ -1,3 +1,4 @@
+/* Flexible divisions (incomplete) */
 public class MultiStack {
   private class Info {
     public int start, size, cap;
