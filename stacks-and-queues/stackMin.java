@@ -4,7 +4,7 @@ Have each node record what the min beneath itself is.
 */
 import java.util.Stack;
 
-public class StackWithMin extends Stack<Node> {
+public class StackWithMin extends Stack<NodeWithMin> {
   public void push(int val) {
     int newMin = Math.min(val, min());
     super.push(new NodeWithMin(val, newMin));
