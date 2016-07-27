@@ -2,6 +2,7 @@
 Design a stack which has push, pop, and min that all operate in O(1) time. 
 Have each node record what the min beneath itself is. 
 */
+import java.util.Stack;
 
 public class StackWithMin extends Stack<Node> {
   public void push(int val) {
