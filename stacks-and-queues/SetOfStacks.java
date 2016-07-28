@@ -1,5 +1,6 @@
 /*
 SetOfStacks creates a new stack once the prev one exceeds cap.
+Follow up:  popAt(int index) *later*.
 */
 
 import java.util.ArrayList;
