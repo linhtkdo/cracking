@@ -1,5 +1,8 @@
 /*
 Implement a queue using 2 stacks.
+1. Add to only one stack; remove from only the other.
+2. Use stack API (isEmpty).
+3. Use private method and call it in public method (shiftStack).
 */
 
 public class MyQueue<T> {
