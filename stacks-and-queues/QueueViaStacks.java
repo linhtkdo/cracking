@@ -3,8 +3,10 @@ Implement a queue using 2 stacks.
 1. Add to only one stack; remove from only the other.
 2. Use stack API (isEmpty).
 3. Use private method and call it in public method (shiftStack).
+4. Use <T> when implementing MyQueue and using built-in Stack
 */
 
+import java.util.Stack;
 public class MyQueue<T> {
   Stack<T> s1, s2;
   
