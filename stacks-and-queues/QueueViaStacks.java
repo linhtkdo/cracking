@@ -1,7 +1,7 @@
 /*
 Implement a queue using 2 stacks.
 1. Add to only one stack; remove from only the other.
-2. Use stack API (isEmpty).
+2. Know stack API (isEmpty, size), queue API(size, remove, add, peek)
 3. Use private method and call it in public method (shiftStack).
 4. Use <T> when implementing MyQueue and using built-in Stack
 */
