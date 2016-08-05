@@ -4,6 +4,7 @@ Given a directed graph, find out whether there is a route btw 2 nodes.
 2. Graph method: getNodes(). Node method: getAdjacent().
 3. Use LinkedList for queue.
 4. Special case (start==end) -> terminate at start. 
+5. Focus on 1 approach first. (bfs before considering dfs)
 */
 
 enum State { Unvisited, Visited, Visiting; } // mark
