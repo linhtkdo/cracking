@@ -1,1 +1,26 @@
+/* 
+Given a binary tree, create a linked list of all the nodes at each depth.
+If you have a tree with depth D, you'll have D linked lists.
+*/
 
+ArrayList<LinkedList<Node>> getList(Node root) {
+  ArrayList<LinkedList<Node>> lists = new ArrayList<LinkedList<Node>>();
+  getList(root, lists, 0);
+  return lists;
+}
+
+void getList(Node root, ArrayList<LinkedList<Node>> lists, int lv) {
+  if (root == null) return;
+  
+  LinkedList<Node> list = null;
+  if (lists.size() == lv) { // lv not contained in list
+    list = new LinkedList<Node>();
+    lists.add(list);
+  } else {
+    list = lists.get(lv);
+  }
+  
+  list.add(root);
+  getList(root.left, lists, lv + 1);
+  getList(root.right, lists, lv + 1);
+}
