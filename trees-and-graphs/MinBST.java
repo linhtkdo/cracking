@@ -3,8 +3,6 @@ Given a sorted (increasing order) arr w unique int elts, create a bst w min heig
 1. Create helper that takes in extra params (start, end). Call helper from public method.
 2. Base case: use start, end (a won't change). Return null (Node) when subsection has 0 elts. 
 3. Recurse: create new Node(mid), pass a subsection(left, right) of a using start, end.
-
-
 */
 
 Node minBST(int[] a) {
