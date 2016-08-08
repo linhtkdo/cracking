@@ -15,7 +15,7 @@ ArrayList<LinkedList<Node>> getList(Node root) {
 }
 
 void getList(Node root, ArrayList<LinkedList<Node>> lists, int lv) {
-  if (root == null) return;
+  if (root == null) return; // base case
   
   LinkedList<Node> list = null;
   if (lists.size() == lv) { // lv not contained in list
