@@ -2,7 +2,7 @@
 Given a binary tree, create a linked list of all the nodes at each depth.
 If you have a tree with depth D, you'll have D linked lists.
 
-1. pre-order traversal + pass in lv + 1 to next recursive call: ensure that we know which lv we're on.
+1. pre-order traversal(dfs) + pass in lv + 1 to next recursive call: ensure that we know which lv we're on.
 2. ArrayList: resizable array, add(E), size(), get(index).
 3. public method: create arr, call helper(node, arr, lv) -- add lists of nodes to arr, return arr. 
 4. Use size() == lv to check if list has been created. 
