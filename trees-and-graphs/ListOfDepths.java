@@ -4,6 +4,8 @@ If you have a tree with depth D, you'll have D linked lists.
 
 1. pre-order traversal + pass in lv + 1 to next recursive call: ensure that we know which lv we're on.
 2. ArrayList: resizable array, add(elt), size(). 
+3. helper(node, arr, lv)
+4. Use size() == lv to check if list has been created. 
 */
 
 ArrayList<LinkedList<Node>> getList(Node root) {
