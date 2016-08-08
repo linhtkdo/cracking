@@ -1,6 +1,9 @@
 /* 
 Given a binary tree, create a linked list of all the nodes at each depth.
 If you have a tree with depth D, you'll have D linked lists.
+
+1. pre-order traversal + pass in lv + 1 to next recursive call: ensure that we know which lv we're on.
+2. ArrayList: resizable array, add(elt), size(). 
 */
 
 ArrayList<LinkedList<Node>> getList(Node root) {
