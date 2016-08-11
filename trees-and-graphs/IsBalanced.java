@@ -5,7 +5,7 @@ A balanced tree is a tree st the heights of the 2 subtrees of any node never dif
 Recursion
 Post order traversal technique
 Travel all the way down to leaf nodes and then go up.
-while going up, calculate the left and right subtree height.
+while going up, calculate the left and right subtree height. 
 If the difference between them is greater than 1, return –1.
 Else Max(leftHeight, rightHeight) +1 .
 Store the height at each level and when you go one level up, you add one to it.
@@ -16,16 +16,16 @@ boolean isBalanced(Node root) {
   return helper(root) > 0;
 }
 
-int helper(Node root) {
+int helper(Node root) { 
   if (root == null) return 0;
   
   int leftH = helper(root.left);
-  if (leftH == -1) return -1;
+  if (leftH == -1) return -1; // pass error up
   
   int rightH = helper(root.right);
-  if (rightH == -1) return -1;
+  if (rightH == -1) return -1; // pass error up
   
   int diff = leftH - rightH;
-  if (Math.abs(diff) > 1) return -1;
-  return 1 + Math.max(leftH, rightH);
+  if (Math.abs(diff) > 1) return -1; // found error -> pass it back
+  return 1 + Math.max(leftH, rightH); // otherwise pass height
 }
